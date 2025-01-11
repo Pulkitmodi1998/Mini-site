@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h3>MINI SITE</h3>
+            </div>
+            <!-- Menu Icon for Mobile -->
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Unicode for Menu Icon -->
+            </div>
+            <!-- Dropdown menu that shows when menu button is clicked -->
+            <nav class="main-nav" id="dropdown-menu">
+                <ul class="nav-center">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right" id="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="register-btn">Register</a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Image Slider -->
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="image/Dance_and_Aerobics.jpg" alt="Aerobics Image">
+                    <div class="hover-details">Aerobics - Full body workout</div>
+                </div>
+                <div class="slide">
+                    <img src="image/Outdoor_hiking.jpg" alt="Outdoor Hiking Image">
+                    <div class="hover-details">Outdoor Hiking - Explore nature</div>
+                </div>
+                <div class="slide">
+                    <img src="image/Runing.jpg" alt="Running Image">
+                    <div class="hover-details">Running - Boost your stamina</div>
+                </div>
+                <div class="slide">
+                    <img src="image/Yoga.jpg" alt="Swimming Image">
+                    <div class="hover-details">Yoga - Balance your body and mind</div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-dots">
+            <!-- Navigation Dots for Slider -->
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <h2>Engage in New Physical Activities</h2>
+        <p>Our website provides a platform to explore and participate in a variety of physical activities that help you stay healthy and fit.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 MINI Websites Ltd. All rights reserved.</p>
+    </footer>
+ 
+    <script>
+      // JavaScript to Toggle Dropdown Menu
+const menuIcon = document.getElementById('menu-icon');
+const navMenu = document.getElementById('dropdown-menu');
+const navButtons = document.getElementById('nav-buttons');
+
+// Toggle 'active' class on menu click for dropdown and navButtons
+menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    navButtons.classList.toggle('active');
+});
+
+    // JavaScript for Image Slider
+    const slides = document.querySelector('.slides');
+    const dots = document.querySelectorAll('.nav-dots .dot');
+    let currentIndex = 0;
+    const totalSlides = slides.children.length;
+
+    // Function to show the current slide based on index
+    function showSlide(index) {
+        slides.style.transform = `translateX(${-index * 100}%)`;
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
+        currentIndex = index;
+    }
+
+    // Initial display
+    showSlide(0);
+
+    // Set interval to move to the next slide every 2 seconds
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    }, 2000); // 2000ms = 2 seconds
+
+    // Add click event listeners to dots for manual navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+        });
+    });
+
+
+    </script>
+</body>
+</html>

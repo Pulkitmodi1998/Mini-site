@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="resources.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h3>MINI SITE</h3>
+            </div>
+            <!-- Menu Icon for Mobile -->
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Unicode for Menu Icon -->
+            </div>
+            <!-- Dropdown menu that shows when menu button is clicked -->
+            <nav class="main-nav" id="dropdown-menu">
+                <ul class="nav-center">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right" id="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="register-btn">Register</a>
+            </div>
+        </div>
+    </header>
+    <main class="resources-main">
+        <h2>Useful Resources</h2>
+        <p>Explore these resources to enhance your knowledge and gain valuable insights into maintaining a healthy lifestyle:</p>
+        <div class="resource-links">
+            <div class="resource-item">
+                <h3>Yoga Journal</h3>
+                <p>A comprehensive guide to yoga techniques, practices, and benefits. Perfect for beginners and advanced practitioners.</p>
+                <a href="https://www.yogajournal.com" target="_blank">Visit Yoga Journal</a>
+            </div>
+            <div class="resource-item">
+                <h3>Runner's World</h3>
+                <p>Get expert tips and advice on running, fitness plans, and more to boost your performance and reach your fitness goals.</p>
+                <a href="https://www.runnersworld.com" target="_blank">Visit Runner's World</a>
+            </div>
+            <div class="resource-item">
+                <h3>Hiking Project</h3>
+                <p>Find detailed hiking trails and outdoor adventure guides to explore nature and improve your physical health.</p>
+                <a href="https://www.hikingproject.com" target="_blank">Visit Hiking Project</a>
+            </div>
+            <div class="resource-item">
+                <h3>CDC Physical Activity Guidelines</h3>
+                <p>Learn about the latest physical activity recommendations and guidelines to maintain an active and healthy lifestyle.</p>
+                <a href="https://www.cdc.gov/physicalactivity/" target="_blank">Visit CDC Guidelines</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 MINI Websites Ltd. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript to Toggle Dropdown Menu
+const menuIcon = document.getElementById('menu-icon');
+const navMenu = document.getElementById('dropdown-menu');
+const navButtons = document.getElementById('nav-buttons');
+
+// Toggle 'active' class on menu click for dropdown and navButtons
+menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    navButtons.classList.toggle('active');
+});
+    </script>
+</body>
+</html>

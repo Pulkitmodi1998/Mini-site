@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h3>MINI SITE</h3>
+            </div>
+            <!-- Menu Icon for Mobile -->
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Unicode for Menu Icon -->
+            </div>
+            <!-- Dropdown menu that shows when menu button is clicked -->
+            <nav class="main-nav" id="dropdown-menu">
+                <ul class="nav-center">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Login</h2>
+            <!-- Add id to the form element -->
+            <form id="loginForm" action="#" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+            <!-- Message display -->
+            <div id="message" class="message"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 MINI Websites Ltd. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript to Toggle Dropdown Menu
+const menuIcon = document.getElementById('menu-icon');
+const navMenu = document.getElementById('dropdown-menu');
+const navButtons = document.getElementById('nav-buttons');
+
+// Toggle 'active' class on menu click for dropdown and navButtons
+menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    navButtons.classList.toggle('active');
+});
+        // Predefined users with emails and passwords
+        const users = {
+            person1: {
+                email: "smith@gmail.com",
+                password: "smith@123"
+            },
+            person2: {
+                email: "james@gmail.com",
+                password: "james@123"
+            }
+        };
+
+        // Get input fields and message display
+        const loginForm = document.getElementById('loginForm');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const messageDisplay = document.getElementById('message');
+
+        // Add event listener to autofill based on username
+        usernameInput.addEventListener('input', () => {
+            const username = usernameInput.value.toLowerCase();
+
+            // Autofill if the username matches the predefined users
+            if (users[username]) {
+                usernameInput.value = users[username].email;
+                passwordInput.value = users[username].password;
+            }
+        });
+
+        // Add event listener to the form to handle login submission
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent form submission
+
+            // Check if the provided credentials match predefined users
+            const email = usernameInput.value.toLowerCase();
+            const password = passwordInput.value;
+
+            if (
+                (email === users.person1.email && password === users.person1.password) ||
+                (email === users.person2.email && password === users.person2.password)
+            ) {
+                // Successful login message
+                messageDisplay.textContent = "Login successful!";
+                messageDisplay.classList.add('success');
+                messageDisplay.classList.remove('error');
+                messageDisplay.style.display = "block";
+
+                setTimeout(() => {
+                    window.location.href = "index.html"; // Change to your home page
+                }, 1000);
+            } else {
+                // Error message for incorrect credentials
+                messageDisplay.textContent = "Invalid username or password. Please try again.";
+                messageDisplay.classList.add('error');
+                messageDisplay.classList.remove('success');
+                messageDisplay.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>

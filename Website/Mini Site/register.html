@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h3>MINI SITE</h3>
+            </div>
+            <!-- Menu Icon for Mobile -->
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Unicode for Menu Icon -->
+            </div>
+            <!-- Dropdown menu that shows when menu button is clicked -->
+            <nav class="main-nav" id="dropdown-menu">
+                <ul class="nav-center">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Register</h2>
+            <form action="#" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required><br>
+
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 MINI Websites Ltd. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript to Toggle Dropdown Menu
+const menuIcon = document.getElementById('menu-icon');
+const navMenu = document.getElementById('dropdown-menu');
+const navButtons = document.getElementById('nav-buttons');
+
+// Toggle 'active' class on menu click for dropdown and navButtons
+menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    navButtons.classList.toggle('active');
+});
+    </script>
+</body>
+</html>

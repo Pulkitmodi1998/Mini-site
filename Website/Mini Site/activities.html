@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+    <link rel="stylesheet" href="activities.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h3>MINI SITE</h3>
+            </div>
+            <!-- Menu Icon for Mobile -->
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Unicode for Menu Icon -->
+            </div>
+            <!-- Dropdown menu that shows when menu button is clicked -->
+            <nav class="main-nav" id="dropdown-menu">
+                <ul class="nav-center">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right" id="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="register-btn">Register</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="activities-section">
+            <h2>Explore Our Activities</h2>
+            <p>We offer a range of physical activities designed to engage and inspire you. Whether you’re looking to improve your fitness, explore nature, or just have fun, we have something for everyone.</p>
+            <div class="activities-list">
+                <!-- Yoga and Meditation Section -->
+                <div class="activity-item">
+                    <h3>Yoga and Meditation</h3>
+                    <p>Find peace and relaxation through our guided yoga and meditation sessions, suitable for all levels.</p>
+                    <div class="activity-images">
+                        <img src="image/Yoga.jpg" alt="Yoga Image 1">
+                        <img src="image/Yoga1.jpg" alt="Yoga Image 2">
+                        <img src="image/yoga2.jpg" alt="Yoga Image 3">
+                        <img src="image/yoga3.jpg" alt="Yoga Image 4">
+                    </div>
+                    <div class="button-container">
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Running and Cardio Section -->
+                <div class="activity-item">
+                    <h3>Running and Cardio</h3>
+                    <p>Boost your stamina and heart health with running and cardio workouts that will keep you active and energized.</p>
+                    <div class="activity-images">
+                        <img src="image/Runing.jpg" alt="Running Image 1">
+                        <img src="image/Runing1.jpg" alt="Running Image 2">
+                        <img src="image/cadio.jpg" alt="Running Image 3">
+                        <img src="image/cadio1.jpg" alt="Running Image 4">
+                    </div>
+                    <div class="button-container">
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Strength Training Section -->
+                <div class="activity-item">
+                    <h3>Strength Training</h3>
+                    <p>Build muscle and strength through a variety of weight and resistance training exercises.</p>
+                    <div class="activity-images">
+                        <img src="image/Strength Training.jpg" alt="Strength Training Image 1">
+                        <img src="image/Strength Training1.jpg" alt="Strength Training Image 2">
+                        <img src="image/Strength Training2.jpg" alt="Strength Training Image 3">
+                        <img src="image/Strength Training3.jpg" alt="Strength Training Image 4">
+                    </div>
+                    <div class="button-container">
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Outdoor Hiking Section -->
+                <div class="activity-item">
+                    <h3>Outdoor Hiking</h3>
+                    <p>Explore nature and stay fit by joining our hiking adventures to beautiful outdoor locations.</p>
+                    <div class="activity-images">
+                        <img src="image/Outdoor hiking.jpg" alt="Hiking Image 1">
+                        <img src="image/Outdoor hiking1.jpg" alt="Hiking Image 2">
+                        <img src="image/Outdoor hiking2.jpg" alt="Hiking Image 3">
+                        <img src="image/Outdoor hiking3.jpg" alt="Hiking Image 4">
+                    </div>
+                    <div class="button-container">
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Dance and Aerobics Section -->
+                <div class="activity-item">
+                    <h3>Dance and Aerobics</h3>
+                    <p>Stay fit while having fun with our dance and aerobics classes, perfect for all ages and fitness levels.</p>
+                    <div class="activity-images">
+                        <img src="image/Dance and Aerobics.jpg" alt="Dance Image 1">
+                        <img src="image/Dance and Aerobics1.jpg" alt="Dance Image 2">
+                        <img src="image/Dance and Aerobics2.jpg" alt="Dance Image 3">
+                        <img src="image/Dance and Aerobics3.jpg" alt="Dance Image 4">
+                    </div>
+                    <div class="button-container">
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MINI Websites Ltd. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript to Toggle Dropdown Menu
+const menuIcon = document.getElementById('menu-icon');
+const navMenu = document.getElementById('dropdown-menu');
+const navButtons = document.getElementById('nav-buttons');
+
+// Toggle 'active' class on menu click for dropdown and navButtons
+menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    navButtons.classList.toggle('active');
+});
+    </script>
+</body>
+</html>

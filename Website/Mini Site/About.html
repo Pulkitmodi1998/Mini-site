@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h3>MINI SITE</h3>
+            </div>
+            <!-- Menu Icon for Mobile -->
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Unicode for Menu Icon -->
+            </div>
+            <nav class="main-nav " id="dropdown-menu">
+                <ul class="nav-center">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right" id="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="register-btn">Register</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="about-section">
+            <h2>About Us</h2>
+            <p>We promote a healthy lifestyle through various physical activities and engaging content. Our mission is to inspire you to adopt new hobbies and exercises that improve both body and mind.</p>
+            
+            <h3>Our Vision</h3>
+            <p>To create a platform that encourages people of all ages to adopt an active lifestyle through sports, yoga, hiking, and more.</p>
+            
+            <h3>What We Offer</h3>
+            <ul>
+                <li><strong>Engaging Articles</strong> to learn and grow.</li>
+                <li><strong>Interactive Programs</strong> to stay motivated.</li>
+                <li><strong>Community Support</strong> for shared experiences.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MINI Websites Ltd. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript to Toggle Dropdown Menu
+const menuIcon = document.getElementById('menu-icon');
+const navMenu = document.getElementById('dropdown-menu');
+const navButtons = document.getElementById('nav-buttons');
+
+// Toggle 'active' class on menu click for dropdown and navButtons
+menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    navButtons.classList.toggle('active');
+});
+    </script>
+</body>
+</html>
